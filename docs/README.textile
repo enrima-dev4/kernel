@@ -1,7 +1,6 @@
 h2. Draft documentation
 * a collection of drafts supporting testing the Kernel prototype
-* the SMS is kept in enrima-dev4/enrima_schema repository (not duplicated
-here)
+* the SMS is kept in enrima-dev4/enrima_schema repository (not duplicated here)
 
 h4. The content of files:
 * sms.pdf: a tiny SMS for initial Kernel testing
