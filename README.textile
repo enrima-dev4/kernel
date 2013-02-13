@@ -1,3 +1,7 @@
-h2. Content of directories:
-* first dir
-* second dir
+h2. Content of directories
+
+h4. doc - documentation
+
+h4. clients - examples of Enrima applications consuming the Kernel's WS (Web-Services)
+* data_wrapper: simple application (in Java) uploading data
+* test_gui: simple GUI (developed in Spring) for testing the Kernel
