@@ -1,0 +1,10 @@
+h2. data_wrapper: simple application uploading data
+
+h4. Short characteristics:
+* written in Java
+* takes arguments from the cmd-line
+* reads data from a csv file
+* uses a WS to get the SMS
+* uses WSs for uploading data to the DW (DataWarehouse)
+
+h4. Documentation is available in the enrima-dev4/kernel/docs directory

@@ -1,0 +1,12 @@
+h2. test_gui: simple GUI for the Kernel testing
+
+h4. Short characteristics:
+* developed in Spring
+* uses the SMS (model_id 91) described in the documentation directory
+* uses a WS to get the SMS
+* reads data (members of sets and values of parameters) from the DW (DataWarehouse)
+* supports modification of uploaded data
+* supports adding new data
+* uses WSs for uploading added/modified data to the DW
+
+h4. Documentation is available in the enrima-dev4/kernel/docs directory

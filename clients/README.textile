@@ -1,0 +1,3 @@
+h2. Examples of Enrima applications consuming the Kernel's WS
+* data_wrapper: simple application (in Java) uploading data
+* test_gui: simple GUI (developed in Spring) for testing the Kernel
