@@ -1,0 +1,10 @@
+h2. scen_gen: a mock-up of the Scenario Generator
+
+h4. Short characteristics:
+* written in C++
+* takes arguments from the cmd-line
+* uses a WS to get the SMS
+* uses WSs for downloading data from the DW (DataWarehouse)
+* uses WSs for uploading data to the DW
+
+h4. Documentation is available in the enrima-dev4/kernel/docs directory
