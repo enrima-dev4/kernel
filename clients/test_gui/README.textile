@@ -30,7 +30,7 @@ h4. Short characteristics:
 h4. Install
 * $cd test_gui
 * $mvn -Dmaven.test.skip=true clean install 
-h4 Run
+h4. Run
 * $cd ui
 * $mvn tomcat7:run
   (http://localhost:8888/enrima)
