@@ -2,11 +2,22 @@ h2. test_gui: simple GUI for the Kernel testing
 
 h4. Short characteristics:
 * developed in Spring
-* uses the SMS (model_id 91) described in the documentation directory
-* uses a WS to get the SMS
-* reads data (members of sets and values of parameters) from the DW (DataWarehouse)
-* supports modification of uploaded data
-* supports adding new data
-* uses WSs for uploading added/modified data to the DW
+* provides testing environment for the Kernel prototype
+
+h4. Basic functionality:
+* uses the SMS of the test model (id 71) described in the documentation directory
+* gets the SMS
+* uploads data from XML files
+* uploads data from CSV file (through the data wrapper)
+* uploads data (members of sets and values of parameters) from the DW 
+* supports interactive data handling (adding, modification, removing)
+* uploads added/modified data to the DW
+* supports creating analyses, specification of the corresponding preferences, calling  solver, displaying solution  [NOT fully functioning yet] 
+
+h4. The contents of the file and directories:
+* pom.xml: configuration for the Maven
+* core: stubs for consuming WSs
+* jira4-client: interface to the bug-tracking utility Jira
+* ui: components of the MVC (Model, View, Controller)
 
 h4. Documentation is available in the enrima-dev4/kernel/docs directory
