@@ -26,6 +26,19 @@
 			</roles>
 			<timezone>+1</timezone>
 		</developer>
+	<developer>
+			<id>Marek</id>
+			<name>Marek Makowski</name>
+			<email>marek@iiasa.ac.at</email>
+			<organization>IIASA</organization>
+			<organizationUrl>
+                http://www.iiasa.ac.at
+            </organizationUrl>
+			<roles>
+				<role>Project leader</role>
+			</roles>
+			<timezone>+1</timezone>
+		</developer>
 	</developers>
 
     <modules>
