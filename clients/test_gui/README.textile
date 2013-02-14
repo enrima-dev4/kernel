@@ -20,4 +20,18 @@ h4. The contents of the file and directories:
 * jira4-client: interface to the bug-tracking utility Jira
 * ui: components of the MVC (Model, View, Controller)
 
+h4. Short characteristics:
+* written in Java
+* takes arguments from the cmd-line
+* reads data from a csv file
+* uses a WS to get the SMS
+* uses WSs for uploading data to the DW (DataWarehouse)
+
+h4. Install
+* $cd test_gui
+* $mvn -Dmaven.test.skip=true clean install 
+h4 Run
+* $cd ui
+* $mvn tomcat7:run
+  (http://localhost:8888/enrima)
 h4. Documentation is available in the enrima-dev4/kernel/docs directory
