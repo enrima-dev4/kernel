@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+	"-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+	"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+	
+<tiles-definitions>
+
+    <definition name="timeout" extends="enrimaTimeoutLayout">
+		<put-attribute name="body" value="/WEB-INF/views/timeout.jsp" />
+	</definition>
+	 <definition name="uploadXML/fileUpload" extends="enrimaLayout">
+		<put-attribute name="body" value="/WEB-INF/views/uploadXML/fileUpload.jsp" />
+	</definition>
+    <definition name="datawrapper/dashboard" extends="enrimaSubMenuLayout">
+		<put-attribute name="body" value="/WEB-INF/views/datawrapper/dashboard.jsp" />
+	    <put-attribute name="submenu" value="/WEB-INF/views/datawrapper/submenu.jsp" />
+	</definition>
+	 <definition name="datawrapper/fileUpload" extends="enrimaSubMenuLayout">
+		<put-attribute name="body" value="/WEB-INF/views/datawrapper/fileUpload.jsp" />
+	    <put-attribute name="submenu" value="/WEB-INF/views/datawrapper/submenu.jsp" />
+	</definition>
+	<definition name="model" extends="enrimaLayout">
+		<put-attribute name="body" value="/WEB-INF/views/model/model.jsp" />
+	</definition>
+    <definition name="data/dashboard" extends="enrimaSubMenuLayout">
+		<put-attribute name="body" value="/WEB-INF/views/data/dashboard.jsp" />
+		<put-attribute name="submenu" value="/WEB-INF/views/data/submenu.jsp" />
+	</definition>
+	<definition name="data/setmembers" extends="enrimaSubMenuLayout">
+		<put-attribute name="body" value="/WEB-INF/views/data/setmembers.jsp" />
+		<put-attribute name="submenu" value="/WEB-INF/views/data/submenu.jsp" />
+	</definition>
+    <definition name="data/memberForm" extends="enrimaSubMenuLayout">
+		<put-attribute name="body" value="/WEB-INF/views/data/memberForm.jsp" />
+		<put-attribute name="submenu" value="/WEB-INF/views/data/submenu.jsp" />
+	</definition>
+	 <definition name="data/subSetMemberForm" extends="enrimaSubMenuLayout">
+		<put-attribute name="body" value="/WEB-INF/views/data/subSetMemberForm.jsp" />
+		<put-attribute name="submenu" value="/WEB-INF/views/data/submenu.jsp" />
+	</definition>
+	 <definition name="data/indexedSubSet" extends="enrimaSubMenuLayout">
+		<put-attribute name="body" value="/WEB-INF/views/data/indexedSubSet.jsp" />
+		<put-attribute name="submenu" value="/WEB-INF/views/data/submenu.jsp" />
+	</definition>
+	
+    <definition name="data/entityValues" extends="enrimaSubMenuLayout">
+		<put-attribute name="body" value="/WEB-INF/views/data/entityValues.jsp" />
+		<put-attribute name="submenu" value="/WEB-INF/views/data/submenu.jsp" />
+	</definition>
+	  <definition name="data/entityValueForm" extends="enrimaSubMenuLayout">
+		<put-attribute name="body" value="/WEB-INF/views/data/entityValueForm.jsp" />
+		<put-attribute name="submenu" value="/WEB-INF/views/data/submenu.jsp" />
+	</definition>
+    <definition name="data/entityValueEditForm" extends="enrimaSubMenuLayout">
+		<put-attribute name="body" value="/WEB-INF/views/data/entityValueEditForm.jsp" />
+		<put-attribute name="submenu" value="/WEB-INF/views/data/submenu.jsp" />
+	</definition>
+	
+
+	<definition name="analyses" extends="enrimaLayout">
+		<put-attribute name="body" value="/WEB-INF/views/analysis/analyses.jsp" />
+	</definition>
+	
+	<definition name="analysis/form" extends="enrimaLayout">
+	    <put-attribute name="body" value="/WEB-INF/views/analysis/analysisForm.jsp" />
+	</definition>
+	
+	<definition name="analysis/dashboard" extends="enrimaSubMenuLayout">
+		<put-attribute name="body" value="/WEB-INF/views/analysis/dashboard.jsp" />
+		<put-attribute name="submenu" value="/WEB-INF/views/analysis/submenu.jsp" />
+	</definition>
+	
+    <definition name="analysis/preference" extends="enrimaSubMenuLayout">
+		<put-attribute name="body" value="/WEB-INF/views/analysis/preference.jsp" />
+		<put-attribute name="submenu" value="/WEB-INF/views/analysis/submenu.jsp" />
+	</definition>
+	<definition name="analysis/preferenceForm" extends="enrimaSubMenuLayout">
+		<put-attribute name="body" value="/WEB-INF/views/analysis/preferenceForm.jsp" />
+		<put-attribute name="submenu" value="/WEB-INF/views/analysis/submenu.jsp" />
+	</definition>
+	<definition name="analysis/solverStatus" extends="enrimaSubMenuLayout">
+		<put-attribute name="body" value="/WEB-INF/views/analysis/solverStatus.jsp" />
+		<put-attribute name="submenu" value="/WEB-INF/views/analysis/submenu.jsp" />
+	</definition>
+	<definition name="analysis/solution" extends="enrimaSubMenuLayout">
+		<put-attribute name="body" value="/WEB-INF/views/analysis/solution.jsp" />
+		<put-attribute name="submenu" value="/WEB-INF/views/analysis/submenu.jsp" />
+	</definition>		
+</tiles-definitions>

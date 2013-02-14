@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>at.ac.iiasa.ime.enrima</groupId>
+	<artifactId>enrima-wrapper</artifactId>
+	<version>1.0</version>
+	<packaging>pom</packaging>
+	<name>enrima-wrapper</name>
+	<organization>
+		<name>IIASA IME </name>
+		<url>http://www.iiasa.ac.at/Research/IME/index.html</url>
+	</organization>
+	<inceptionYear>2013</inceptionYear>
+	<developers>
+		<developer>
+			<id>hongtao</id>
+			<name>Hongtao Ren</name>
+			<email>renh@iiasa.ac.at</email>
+			<organization>IIASA</organization>
+			<organizationUrl>
+                http://www.iiasa.ac.at
+            </organizationUrl>
+			<roles>
+				<role>Developer</role>
+			</roles>
+			<timezone>+1</timezone>
+		</developer>
+	</developers>
+
+    <modules>
+        <module>domain</module>
+        <module>wrapper</module>
+    </modules>
+
+
+</project>

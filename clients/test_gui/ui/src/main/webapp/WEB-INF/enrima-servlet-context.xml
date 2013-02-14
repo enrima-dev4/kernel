@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+		
+	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
+	<!-- Activates various annotations to be detected in bean classes -->
+	<context:annotation-config />
+	
+	<!-- Configures the Spring MVC @Controller programming model -->
+	<mvc:annotation-driven/>
+
+
+	<mvc:resources mapping="/resources/**" location="/resources/, classpath:/META-INF/web-resources/" />
+	<!-- Configures a handler for serving static resources by forwarding to the Servlet container's default Servlet. -->
+	<mvc:default-servlet-handler />
+	<!-- Maps view names to Tiles Definitions with support for partial re-rendering -->
+	<bean id="viewResolver" class="org.springframework.js.ajax.AjaxUrlBasedViewResolver">
+		<property name="viewClass" value="org.springframework.webflow.mvc.view.FlowAjaxTilesView"/>
+	</bean>
+		
+	<!-- Initializes the Apache Tiles CompositeView system -->
+	<bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
+		<property name="definitions">
+			<value>
+				/WEB-INF/**/views.xml
+			</value>
+		</property>
+	</bean>
+	<bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter" />
+
+	
+	<!-- Imports the application controllers that process client requests -->
+	<import resource="enrima-controllers.xml" />
+    <import resource="i18n.xml" />
+	<!-- Only needed because we require fileupload in the org.springframework.samples.mvc.fileupload package -->
+   <bean id="multipartResolver"
+    class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+    <!-- one of the properties available; the maximum file size in bytes -->
+    <property name="maxUploadSize" value="500000000"/>
+   </bean>
+
+</beans>

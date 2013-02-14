@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:oxm="http://www.springframework.org/schema/oxm"
+	xsi:schemaLocation="http://www.springframework.org/schema/oxm http://www.springframework.org/schema/oxm/spring-oxm-3.0.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+
+    <bean id="messageFactory" class="org.springframework.ws.soap.saaj.SaajSoapMessageFactory"/>
+    <bean id="enrimaClient" class="at.ac.iiasa.ime.enrima.client.datawrapper.EnrimaClient" abstract="true">
+        <constructor-arg ref="messageFactory"/>
+      <!--   <property name="defaultUri" value="http://pc98135:8080/web-services/soap/enrima" />-->
+        <property name="defaultUri" value="http://www.ime.iiasa.ac.at/enrima_ws_tst1/soap/enrima" /> 
+        <property name="marshaller" ref="marshaller"/>
+        <property name="unmarshaller" ref="marshaller"/>
+    </bean>
+
+    <oxm:jaxb2-marshaller id="marshaller" contextPath="at.ac.iiasa.ime.enrima.client.domain"/>
+    <bean id="dataWrapperClient" parent="enrimaClient" class="at.ac.iiasa.ime.enrima.client.datawrapper.DataWrapperClientImpl" />
+
+</beans>
