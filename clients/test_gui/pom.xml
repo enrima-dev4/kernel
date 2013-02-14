@@ -42,7 +42,7 @@
 	</developers>
 
     <modules>
-        <module>jira4-client</module>
+        <module>jira4_client</module>
         <module>core</module>
         <module>ui</module>
     </modules>
