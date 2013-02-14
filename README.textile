@@ -7,3 +7,7 @@ h4. docs - documentation:
 h4. clients - examples of Enrima applications consuming the Kernel's WS (Web-Services)
 * data_wrapper: simple application (in Java) uploading data
 * test_gui: simple GUI (developed in Spring) for testing the Kernel
+
+h2. Two easy ways for importing the repository to a local computer:
+* by cloning the repository using git ($git clone git://github.com/enrima-dev4/kernel.git)
+* by downloading the repository as the zip file (using the ZIP button)
