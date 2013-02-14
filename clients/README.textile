@@ -1,4 +1,4 @@
 h2. Examples of Enrima applications consuming the Kernel's WS
 * data_wrapper: simple application (in Java) uploading data
-* scen_gen: a Scenario Generator mock-up (in C++) for testing use of WSs
+* scen_gen: a Scenario Generator mock-up (in C++) for illustrating automatic generation of headers and DTOs, as well as WSs for getting the SMS
 * test_gui: simple GUI (developed in Spring) for testing the Kernel

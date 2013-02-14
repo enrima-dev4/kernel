@@ -7,4 +7,18 @@ h4. Short characteristics:
 * uses a WS to get the SMS
 * uses WSs for uploading data to the DW (DataWarehouse)
 
+h4. Generate executable jar (enrimaDataWrapper.jar)
+* $cd data_wrapper
+* $mvn -Dmaven.test.skip=true clean install 
+* $cd wrapper&&mvn -Dmaven.test.skip=true package
+* $cd target
+* $mv *one-jar.jar enrimaDataWrapper.jar
+
+h4. Upload mainset data example:
+* $java -jar enrimaDataWrapper.jar mainset xx.csv modelId modelDataId
+
+h4. Upload entity values example:
+* $java -jar enrimaDataWrapper.jar entity xx.csv modelId modelDataId
+(csv file templates can be find in wrapper/src/main/resources)
+
 h4. Documentation is available in the enrima-dev4/kernel/docs directory
