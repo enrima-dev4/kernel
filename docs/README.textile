@@ -1,6 +1,9 @@
 h2. Draft documentation
 * a collection of drafts supporting testing the Kernel prototype
-* the SMS is kept in enrima-dev4/enrima_schema repository (not duplicated here)
 
 h4. The content of files:
-* sms.pdf: a tiny SMS for initial Kernel testing
+* spc.pdf: a tiny SMS for initial Kernel testing
+
+h4. The content of directories:
+* ws_schema: specification of schemas of the WS (Web Services); it is organized into components, each documented in the corresponding PDF file
+* dw_schema: the DW (DataWarehouse) schema
