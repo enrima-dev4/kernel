@@ -1,5 +1,5 @@
-####header, set
-####entities
+# the third line serves as the  header specifying two sets (K, T) and two
+# parameters (demMin, demDes); see the ..../docs/spc.pdf for details
 K,T,demMin,demDes
 cooling,1,13.3,1.21
 cooling,2,12.6,2.21
