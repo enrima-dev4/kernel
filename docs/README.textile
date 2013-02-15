@@ -1,6 +1,7 @@
 h2.  Documentation of the Kernel prototype and the corresponding testing environment
 
 h4. The content of files:
+* datawrapper.pdf: the developer guide to the Data-wrapper
 * spc.pdf: a tiny SMS for initial Kernel testing
 
 h4. The content of directories:
