@@ -1,0 +1,47 @@
+<ns2:storeEntityValuesRequest
+  xmlns:ns2="http://www.ime.iiasa.ac.at/enrima" xmlns:ns3="http://www.ime.iiasa.ac.at/model/instance">
+  <idModelSpec>71</idModelSpec>
+  <idModeldata>23</idModeldata>
+  <entityValues>
+    <entityShortName>demMin</entityShortName>
+    <tupleValues>
+      <tuple>cooling,1</tuple>
+      <value>
+        <doubleValue>13.3</doubleValue>
+      </value>
+    </tupleValues>
+    <tupleValues>
+      <tuple>cooling,2</tuple>
+      <value>
+        <doubleValue>12.6</doubleValue>
+      </value>
+    </tupleValues>
+    <tupleValues>
+      <tuple>elect,2</tuple>
+      <value>
+        <doubleValue>45.6</doubleValue>
+      </value>
+    </tupleValues>
+  </entityValues>
+  <entityValues>
+    <entityShortName>demDes</entityShortName>
+    <tupleValues>
+      <tuple>cooling,1</tuple>
+      <value>
+        <doubleValue>1.21</doubleValue>
+      </value>
+    </tupleValues>
+    <tupleValues>
+      <tuple>cooling,2</tuple>
+      <value>
+        <doubleValue>2.21</doubleValue>
+      </value>
+    </tupleValues>
+    <tupleValues>
+      <tuple>elect,2</tuple>
+      <value>
+        <doubleValue>19.21</doubleValue>
+      </value>
+    </tupleValues>
+  </entityValues>
+</ns2:storeEntityValuesRequest>

@@ -14,9 +14,9 @@ public class CSVTest {
 
 	@Autowired private  DataWrapperClient dataWrapperClient;
 	String path = System.getProperty("user.dir");
-	 @Test
+	 /*	  @Test
 	 public void storeMainSetICSVTest(){
-		 /*	 
+		
 		 try {
 			 dataWrapperClient.uploadMainSet(path +"/src/main/resources/mainset_I.csv", 71, 23);
 
@@ -43,7 +43,7 @@ public class CSVTest {
 		}
 		
 	 }
-	
+	 */
 	 @Test
 	 public void storeEntityValuesCSVTest(){
 		 try {
@@ -51,7 +51,7 @@ public class CSVTest {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		 */
+		
 	 }
 	
 
