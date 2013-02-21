@@ -3,11 +3,9 @@ h2. Content of directories
 h4. docs - documentation of the Kernel prototype and the corresponding testing environment
 * SMS of a tiny model for initial Kernel testing
 * developer guide to the Data-wrapper
+* developer guide to scen_gen (demonstration of using WSs by C++-applications)
 * specification of schemas of the WS (Web Services); it is organized into components, each documented in the corresponding PDF file
 * the DW (DataWarehouse) schema
-* datawrapper.pdf: the developer guide to the Data-wrapper
-* scen_gen.pdf: the developer guide to scen_gen (demonstration of using WSs by
-C++-applications)
 
 h4. clients - examples of Enrima applications consuming the Kernel's WS (Web-Services)
 * data_wrapper: simple application (in Java) uploading data
