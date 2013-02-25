@@ -4,6 +4,7 @@ h4. docs - documentation of the Kernel prototype and the corresponding testing e
 * SMS of a tiny model for initial Kernel testing
 * developer guide to the Data-wrapper
 * developer guide to scen_gen (demonstration of using WSs by C++-applications)
+* developer guide to test_gui (demonstration of using WSs by GUI-applications)
 * specification of schemas of the WS (Web Services); it is organized into components, each documented in the corresponding PDF file
 * the DW (DataWarehouse) schema
 

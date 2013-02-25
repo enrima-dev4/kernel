@@ -3,6 +3,7 @@ h2.  Documentation of the Kernel prototype and the corresponding testing environ
 h4. The content of files:
 * datawrapper.pdf: the developer guide to the Data-wrapper
 * scen_gen.pdf: the developer guide to scen_gen (demonstration of using WSs by C++-applications)
+* test_gui.pdf: the developer guide to test_gui (demonstration of using WSs by GUI-applications)
 * spc.pdf: a tiny SMS for initial Kernel testing
 
 h4. The content of directories:
