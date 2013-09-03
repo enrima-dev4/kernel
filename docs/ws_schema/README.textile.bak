@@ -3,7 +3,3 @@ h2. The files contain specification of the corresponding web-services
 * data.pdf: model data
 * ana.pdf: analysis
 * wss.pdf: web services
-* user.pdf: users, groups and roles
-* acl.pdf: access control list
-* userWSS.pdf: user web services
-* aclWSS.pdf: access control list web services
