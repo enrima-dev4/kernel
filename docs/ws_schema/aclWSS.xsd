@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.ime.iiasa.ac.at/aclWSS" elementFormDefault="qualified"
+    xmlns:aws="http://www.ime.iiasa.ac.at/aclWSS"
+    xmlns:acl="http://www.ime.iiasa.ac.at/acl"
+    xmlns:u="http://www.ime.iiasa.ac.at/user">
+    <xs:import namespace="http://www.ime.iiasa.ac.at/acl" schemaLocation="acl.xsd"/>
+    <xs:import namespace="http://www.ime.iiasa.ac.at/user" schemaLocation="user.xsd"/>
+    <xs:element name="permissionRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="scurityID" type="acl:securityID" minOccurs="1" maxOccurs="1" />
+                <xs:element name="objectType" type="acl:objectType" minOccurs="1" maxOccurs="1" />
+                <xs:element name="idObject" type="xs:int" >
+                    <xs:annotation>
+                        <xs:documentation>refer to the primary id of the domain object</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="permission" type="aws:permission" minOccurs="1" maxOccurs="1" />
+                <xs:element name="permissionRequestType" type="aws:permissionRequestType" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="permissionResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="result" type="xs:string" minOccurs="1" maxOccurs="1" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="getObjectPermissionsRequest">
+        <xs:annotation>
+            <xs:documentation>get all securityID permissions for an objects</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="objectType" type="acl:objectType" minOccurs="1" maxOccurs="1" />
+                <xs:element name="idObject" type="xs:int" >
+                    <xs:annotation>
+                        <xs:documentation>refer to the primary id of the domain object</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="getObjectPermissionsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="objectType" type="acl:objectType" minOccurs="1" maxOccurs="1" />
+                <xs:element name="idObject" type="xs:int" />
+                <xs:element name="securityIDPermissions" type="aws:securityIDPermissions" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    
+    <xs:element name="getObjectsWithUserPermissionsRequest">
+        <xs:annotation>
+            <xs:documentation>get users permissions for a list of objects</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="user" type="u:user" minOccurs="1" maxOccurs="1" />
+                <xs:element name="objectType" type="acl:objectType" minOccurs="1" maxOccurs="1" />
+                <xs:element name="idObject" type="xs:int" minOccurs="1" maxOccurs="unbounded" >
+                    <xs:annotation>
+                        <xs:documentation>list of the primary id of the domain object</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="getObjectsWithUserPermissionsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="objectType" type="acl:objectType" minOccurs="1" maxOccurs="1" />
+                <xs:element name="user" type="u:user" minOccurs="1" maxOccurs="1" />
+                <xs:element name="objectPermissions" type="aws:objectPermissions" minOccurs="1" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:complexType name="securityIDPermissions">
+        <xs:sequence>
+            <xs:element name="scurityID" type="acl:securityID" minOccurs="1" maxOccurs="1" />
+            <xs:element name="permission" type="aws:permission" minOccurs="1" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="objectPermissions">
+        <xs:sequence>
+            <xs:element name="idObject" type="xs:int"  minOccurs="1" maxOccurs="1" />
+            <xs:element name="permission" type="aws:permission" minOccurs="1" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:simpleType name="permission">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="READ" />
+            <xs:enumeration value="WRITE" />
+            <xs:enumeration value="CREATE" />
+            <xs:enumeration value="DELETE" />
+            <xs:enumeration value="ADMIN" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="permissionRequestType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="ADD" />
+            <xs:enumeration value="DELETE" />
+            <xs:enumeration value="CHANGE" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

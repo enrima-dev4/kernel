@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:acl="http://www.ime.iiasa.ac.at/acl"
+    targetNamespace="http://www.ime.iiasa.ac.at/acl" elementFormDefault="qualified"> 
+<xs:complexType name="objectType">
+    <xs:annotation>
+        <xs:documentation>stores the fully qualified name of domain objects</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+        <xs:element name="id" type="xs:int" />
+        <xs:element name="name" type="xs:string" />
+    </xs:sequence>
+</xs:complexType>
+
+    <xs:complexType name="securityID">
+        <xs:annotation>
+            <xs:documentation>stores the name of the users which can be principal (like user's login: hongtao) or a group (like group name: ENE) or an authority (like roles: ROLE_ADMIN, ROLE_USER, etc)</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="id" type="xs:int" />
+            <xs:element name="type" type="acl:sidType" />
+            <xs:element name="name" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="objectIdentity">
+        <xs:annotation>
+            <xs:documentation>stores the identities of the domain objects</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="id" type="xs:int" />
+            <xs:element name="objectType" type="acl:objectType" />
+            <xs:element name="idObject" type="xs:int" >
+                <xs:annotation>
+                    <xs:documentation>refer to the primary id of the domain object</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ownerID" type="acl:securityID" />    
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="aclEntry">
+        <xs:annotation>
+            <xs:documentation>stores the actual permissions assigned for each securityID and domain object</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="id" type="xs:int" />
+            <xs:element name="objectIdentity" type="acl:objectIdentity" />
+            <xs:element name="securityID" type="acl:securityID" />
+            <xs:element name="mask" type="xs:int">
+                <xs:annotation>
+                <xs:documentation>bitwise mask to indicate the permissions: 1:read,2:write,4:create,8:delete,16:admin</xs:documentation>
+                </xs:annotation>
+            </xs:element>    
+        </xs:sequence>
+    </xs:complexType>
+
+   <xs:simpleType name="sidType">
+     <xs:restriction base="xs:string">
+        <xs:enumeration value="USER" />
+        <xs:enumeration value="GROUP" />
+        <xs:enumeration value="ROLE" />
+      </xs:restriction>
+  </xs:simpleType>
+    
+    
+</xs:schema>

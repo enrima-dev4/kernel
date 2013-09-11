@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:u="http://www.ime.iiasa.ac.at/user"
+    targetNamespace="http://www.ime.iiasa.ac.at/user" elementFormDefault="qualified"> 
+<xs:complexType name="user">
+    <xs:sequence>
+        <xs:element name="id" type="xs:int" />
+        <xs:element name="login" type="xs:string" />
+        <xs:element name="password" type="xs:string" />
+        <xs:element name="email" type="xs:string" />
+        <xs:element name="enabled" type="xs:boolean" />
+    </xs:sequence>
+</xs:complexType>
+    
+ <xs:complexType name="role">
+     <xs:annotation>
+         <xs:documentation>
+             groups of rights
+         </xs:documentation>
+     </xs:annotation>
+     <xs:sequence>
+         <xs:element name="id" type="xs:int" />
+         <xs:element name="role" type="xs:string" />
+     </xs:sequence>
+ </xs:complexType>
+
+    <xs:complexType name="group">
+        <xs:annotation>
+            <xs:documentation>
+                groups of users
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="id" type="xs:int" />
+            <xs:element name="name" type="xs:string" />
+            <xs:element name="description" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="groupMember">
+        <xs:sequence>
+            <xs:element name="group" type="u:group" minOccurs="1" maxOccurs="1" />
+            <xs:element name="user" type="u:user" minOccurs="1" maxOccurs="1" />
+            <xs:element name="role" type="u:role" minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="userAuthority">
+        <xs:sequence>
+            <xs:element name="user" type="u:user" minOccurs="1" maxOccurs="1" />
+            <xs:element name="role" type="u:role" minOccurs="1" maxOccurs="1" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="groupAuthority">
+        <xs:sequence>
+            <xs:element name="group" type="u:group" minOccurs="1" maxOccurs="1" />
+            <xs:element name="role" type="u:role" minOccurs="1" maxOccurs="1" />
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

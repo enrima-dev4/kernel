@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.ime.iiasa.ac.at/userWSS" elementFormDefault="qualified"
+    xmlns:uws="http://www.ime.iiasa.ac.at/userWSS"
+    xmlns:u="http://www.ime.iiasa.ac.at/user"> 
+<xs:import namespace="http://www.ime.iiasa.ac.at/user" schemaLocation="user.xsd" />
+   
+    <xs:element name="loginRequest">
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="user" type="u:user" minOccurs="1" maxOccurs="1" />
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="loginResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="user" type="u:user" minOccurs="1" maxOccurs="1" />
+                <xs:element name="group" type="u:group" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element name="role" type="u:role" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="createGroupRequest">
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="group" type="u:group" minOccurs="1" maxOccurs="1" />
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="createGroupResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="result" type="xs:string" minOccurs="1" maxOccurs="1" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="addGroupMembersRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="group" type="u:group" minOccurs="1" maxOccurs="1" />
+                <xs:element name="member" type="u:user" minOccurs="1" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="addGrouMembersResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="result" type="xs:string" minOccurs="1" maxOccurs="1" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="assginUserRolesRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="user" type="u:user" minOccurs="1" maxOccurs="unbounded" />
+                <xs:element name="role" type="u:role" minOccurs="1" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="assginUserRolesResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="result" type="xs:string" minOccurs="1" maxOccurs="1" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="assginGroupRolesRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="group" type="u:group" minOccurs="1" maxOccurs="unbounded" />
+                <xs:element name="role" type="u:role" minOccurs="1" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="assginGroupRolesResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="result" type="xs:string" minOccurs="1" maxOccurs="1" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="getGroupMembersRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="group" type="u:group" minOccurs="1" maxOccurs="1" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="getGroupMembersResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="groupMembers" type="u:groupMember" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="getRolesRequest" />
+  
+    <xs:element name="getRolesResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="role" type="u:role" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
