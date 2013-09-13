@@ -1,9 +1,11 @@
-h2. The files contain specification of the corresponding web-services
-* sms.pdf: symbolic model specifation
-* data.pdf: model data
-* ana.pdf: analysis
-* wss.pdf: web services
-* user.pdf: users, groups and roles
-* acl.pdf: access control list
-* userWSS.pdf: user web services
-* aclWSS.pdf: access control list web services
+h2. The files contain specifications of schema and corresponding web-services.
+* Specifications of schema:
+** sms.pdf: symbolic model specifation schema
+** data.pdf: model data schema
+** ana.pdf: analysis schema
+** user.pdf: users, groups and roles schema
+** acl.pdf: access control list schema
+* Specifications of Web-Services:
+** wss.pdf: web services for SMS, data, and analysis
+** userWSS.pdf: user web services
+** aclWSS.pdf: access control list web services
