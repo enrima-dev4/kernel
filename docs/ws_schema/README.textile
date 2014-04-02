@@ -1,4 +1,4 @@
-h2. Specifications of web-services and data structures.
+h2. Specifications of web-services and data structures
 * Specifications of Web-Services (WSs):
 ** aclWSS.pdf: WSs for access control,
 ** userWSS.pdf: WSs for user management,
@@ -6,7 +6,6 @@ h2. Specifications of web-services and data structures.
 * Specifications of data structures:
 ** acl.pdf: Access Control List (ACL) schema,
 ** ana.pdf: model analyses schema,
-** data.pdf: all other (i.e., not specific for ACL, model analyses, SMS, user
-management) data schema,
+** data.pdf: all other (i.e., not specific for ACL, model analyses, SMS, user management) data schema,
 ** sms.pdf: Symbolic Model Specifation (SMS) schema,
 ** user.pdf: user management (users, groups and roles) schema.
