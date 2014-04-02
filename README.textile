@@ -9,7 +9,7 @@ h4. docs - documentation of the Kernel final implementation and the correspondin
 * Specification of schemas of the WS (Web Services); it is organized into components, each documented in the corresponding PDF file
 * The DW (DataWarehouse) schema
 
-h4. clients - examples of Enrima applications consuming the Kernel's WS (Web-Services)
+h4. clients - examples of DSS applications consuming the Kernel's Web-Services
 * data_wrapper: simple application (in Java) uploading data
 * scen_gen: a Scenario Generator mock-up (in C++) for illustrating automatic generation of headers and DTOs, as well as WSs for getting the SMS
 * test_gui: simple GUI (developed in Spring) for testing the Kernel
