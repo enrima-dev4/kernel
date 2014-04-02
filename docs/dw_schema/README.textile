@@ -2,4 +2,4 @@ h2. Content of the sql directory and the files
 
 * the sql/postgres directory contains examples of automatically generated scripts used for actual creation and dropping of the tables ans sequences for the EnRiMa data-warehouse
 * dw_schema1.pdf contains the first version of the EnRiMa Data-Warehouse schema (presented at the Trondheim mtg). The DW schema is completely transparent for the client applications, and does not depend on the SMS (Symbolic Model Specification); therefore it is posted here only for documentation purposes
-* the other  PDF files contain diverse views on the schema (details are in the ../prototype.pdf)
+* the other  PDF files contain diverse views on the schema (their content is summarized in the ../kernel.pdf)
