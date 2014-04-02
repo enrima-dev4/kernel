@@ -1,4 +1,4 @@
-h2.  Documentation of the Kernel prototype and the corresponding testing environment
+h2.  Documentation of the Kernel and the corresponding testing environment
 
 h4. The content of files:
 * kernel.pdf: technical report on the kernel final implementation
