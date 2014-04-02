@@ -1,7 +1,7 @@
 h2. Content of directories
 
-h4. docs - documentation of the Kernel prototype and the corresponding testing environment
-* Technical report on the kernel prototype implementation
+h4. docs - documentation of the Kernel final implementation and the corresponding testing environment
+* Technical report on the kernel implementation
 * SMS of a tiny model for initial Kernel testing
 * Developer guide to the Data-wrapper
 * Developer guide to scen_gen (demonstration of using WSs by C++-applications)
